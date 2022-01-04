@@ -1,7 +1,17 @@
-[{
-	"Ad": "Mustafa Kemal",
-	"Soyad": "Atatürk",
-	"DogumTarihi": "1881",
-	"Fotograf": "MustafaKemalAtaturk.png",
-	"Aciklama": "lorem ipsum dolar"
-}]
+[
+	{
+		"Ad": "Mustafa Kemal",
+		"Soyad": "Atatürk",
+		"DogumTarihi": "1881",
+		"Fotograf": "MustafaKemalAtaturk.png",
+		"Aciklama": "lorem ipsum dolar"
+	},
+	
+	{
+		"Ad": "Mustafa Kemal2",
+		"Soyad": "Atatürk",
+		"DogumTarihi": "1881",
+		"Fotograf": "MustafaKemalAtaturk.png",
+		"Aciklama": "lorem ipsum dolar"
+	}
+]
