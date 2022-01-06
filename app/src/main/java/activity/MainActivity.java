@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Model.Constants;
+import Model.CustomItemClickListener;
 import Model.DataAdapter;
 import Model.Kisiler;
 import io.reactivex.Observer;
@@ -37,7 +39,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    List<Kisiler> list;
+    private List<Kisiler> list;
+    ImageView image_view;
     private RecyclerView recyclerView;
     private DataAdapter dataAdapter;
     RecyclerView.Adapter mAdapter;
@@ -45,16 +48,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        image_view = findViewById(R.id.image_view);
         recyclerView = findViewById(R.id.recycler_view);
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        layoutManager.scrollToPosition(0);
         recyclerView.setLayoutManager(layoutManager);
 
-        recyclerView.setAdapter(mAdapter);
 
 
         IstekleriAl();
@@ -88,10 +91,21 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete() {
                             if (kisiler.size()>0)
                             {
-/*                                for (Kisiler item: kisiler)
+                                list = new ArrayList<Kisiler>();
+                                for (Kisiler item: list)
                                 {
-                                    Log.e("sa",item.getAd());
-                                }*/
+
+                                    list.add(item.getAd());
+                                    list.add(item.getSoyad());
+
+                                    DataAdapter dataAdapter = new DataAdapter(list, new CustomItemClickListener() {
+                                        @Override
+                                        public void onItemClick(View v, int position) {
+
+                                        }
+                                    });
+                                    recyclerView.setAdapter(dataAdapter);
+                                }
                             }
                         }
                     });

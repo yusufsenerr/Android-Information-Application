@@ -17,48 +17,34 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
-    private List<Kisiler> liste;
-    public DataAdapter(List<Kisiler> list) {
-        liste = list;
+public class DataAdapter extends RecyclerView.Adapter<KisilerViewHolder> {
 
-    }
-    public void  onAttachedToRecyclerView(RecyclerView recyclerView)
-    {
-        super.onAttachedToRecyclerView(recyclerView);
+     List<Kisiler> list = new ArrayList<>();
+     CustomItemClickListener listener;
+    public DataAdapter(List<Kisiler> list,CustomItemClickListener listener) {
+        this.list = list;
+        this.listener = listener;
+
     }
     @NonNull
     @Override
-    public DataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_layout, parent,             false));
+    public KisilerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_layout, parent,false);
+        return new KisilerViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(DataAdapter.ViewHolder holder, int position) {
-    holder.Ad.setText(liste.get(position).getAd());
-        holder.soyad.setText(liste.get(position).getAd());
-        Picasso.with(holder.Fotograf.getContext()).load(liste.get(position).getFotograf()).into(holder.Fotograf);
+    public void onBindViewHolder(KisilerViewHolder holder, int position) {
+        holder.Adtxt.setText(list.get(position).getAd());
+        holder.Soyadtxt.setText(list.get(position).getSoyad());
     }
 
     @Override
-    public int getItemCount() {
-        return liste.size();
-    }
-    public static class ViewHolder extends RecyclerView.ViewHolder
+    public int getItemCount()
     {
-        public CardView card_view;
-        public TextView Ad;
-        public  TextView soyad;
-        public  TextView DogumTarihi;
-        public ImageView Fotograf;
-        public TextView Aciklama;
-        public ViewHolder ( View  itemView)
-        {
-            super(itemView);
-            this.card_view = itemView.findViewById(R.id.card_view);
-            this.Ad = itemView.findViewById(R.id.Ad);
-            this.soyad = itemView.findViewById(R.id.Soyad);
-            this.Fotograf = itemView.findViewById(R.id.image_view);
-        }
+        return list.size();
+    }
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
     }
 }

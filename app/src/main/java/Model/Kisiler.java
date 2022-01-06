@@ -61,4 +61,14 @@ public class Kisiler {
         this.aciklama = aciklama;
     }
 
+    public Kisiler(String Ad,String Soyad,int photo_id)
+    {
+        this.ad = Ad;
+        this.soyad = Soyad;
+    }
+    public Kisiler()
+    {
+
+    }
+
 }

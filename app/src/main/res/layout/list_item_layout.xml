@@ -21,14 +21,14 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/Ad"
+            android:id="@+id/Adtxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/Soyad"
+            android:id="@+id/Soyadtxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
