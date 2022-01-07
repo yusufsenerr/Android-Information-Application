@@ -2,17 +2,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RcvKisiler"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="activity.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="392dp"
-        android:layout_height="329dp"
-        android:clipToPadding="false"
-        android:padding="4dp" />
-
+        android:id="@+id/rcvKisilers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/list_item_layout" />
 </FrameLayout>
 
 

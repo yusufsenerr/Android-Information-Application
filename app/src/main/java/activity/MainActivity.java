@@ -50,19 +50,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
 
-        image_view = findViewById(R.id.image_view);
-        recyclerView = findViewById(R.id.recycler_view);
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
-
-
-
-        IstekleriAl();
     }
-
+private void init()
+{
+    recyclerView = findViewById(R.id.rcvKisilers);
+    IstekleriAl();
+}
     private void IstekleriAl() {
         try {
             new Service().getServiceApi().getkisiler().
@@ -78,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         @Override
-                        public void onNext(@NonNull List<Kisiler> kisileriAl) {
-                            kisiler = kisileriAl;
+                        public void onNext(@NonNull List<Kisiler> getKisiler) {
+                            kisiler = getKisiler;
                         }
 
                         @Override
@@ -91,21 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete() {
                             if (kisiler.size()>0)
                             {
-                                list = new ArrayList<Kisiler>();
-                                for (Kisiler item: list)
-                                {
-
-                                    list.add(item.getAd());
-                                    list.add(item.getSoyad());
-
-                                    DataAdapter dataAdapter = new DataAdapter(list, new CustomItemClickListener() {
-                                        @Override
-                                        public void onItemClick(View v, int position) {
-
-                                        }
-                                    });
-                                    recyclerView.setAdapter(dataAdapter);
-                                }
+                                initRecycleView(kisiler);
                             }
                         }
                     });
@@ -115,5 +96,14 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Hata", "Hataaa");
         }
 
+    }
+
+    private void initRecycleView(List<Kisiler> kisileriAl)
+    {
+        recyclerView = findViewById(R.id.rcvKisilers);
+
+        DataAdapter dataAdapter = new DataAdapter(kisileriAl,getApplicationContext());
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setAdapter(dataAdapter);
     }
 }

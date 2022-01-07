@@ -1,5 +1,6 @@
 package Model;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,12 +20,11 @@ import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<KisilerViewHolder> {
 
-     List<Kisiler> list = new ArrayList<>();
-     CustomItemClickListener listener;
-    public DataAdapter(List<Kisiler> list,CustomItemClickListener listener) {
-        this.list = list;
-        this.listener = listener;
-
+     List<Kisiler> kisilers;
+     Context context;
+    public DataAdapter(List<Kisiler> kisilers,Context context) {
+        this.kisilers = kisilers;
+        this.context = context;
     }
     @NonNull
     @Override
@@ -35,14 +35,16 @@ public class DataAdapter extends RecyclerView.Adapter<KisilerViewHolder> {
 
     @Override
     public void onBindViewHolder(KisilerViewHolder holder, int position) {
-        holder.Adtxt.setText(list.get(position).getAd());
-        holder.Soyadtxt.setText(list.get(position).getSoyad());
+        holder.txtAd.setText(kisilers.get(position).getAd());
+        holder.txtDogumTarihi.setText(kisilers.get(position).getDogumTarihi());
+        holder.txtOzet.setText(kisilers.get(position).getDogumTarihi());
+        GlideUtil.resmiIndiripGoster(context,kisilers.get(position).getFotograf(),holder.imgFoto);
     }
 
     @Override
     public int getItemCount()
     {
-        return list.size();
+        return kisilers.size();
     }
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);

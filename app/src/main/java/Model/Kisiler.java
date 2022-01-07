@@ -8,9 +8,9 @@ public class Kisiler {
     @SerializedName("Ad")
     @Expose
     private String ad;
-    @SerializedName("Soyad")
+    @SerializedName("Ozet")
     @Expose
-    private String soyad;
+    private String ozet;
     @SerializedName("DogumTarihi")
     @Expose
     private String dogumTarihi;
@@ -29,12 +29,12 @@ public class Kisiler {
         this.ad = ad;
     }
 
-    public String getSoyad() {
-        return soyad;
+    public String getOzet() {
+        return ozet;
     }
 
-    public void setSoyad(String soyad) {
-        this.soyad = soyad;
+    public void setOzet(String ozet) {
+        this.ozet = ozet;
     }
 
     public String getDogumTarihi() {
@@ -59,16 +59,6 @@ public class Kisiler {
 
     public void setAciklama(String aciklama) {
         this.aciklama = aciklama;
-    }
-
-    public Kisiler(String Ad,String Soyad,int photo_id)
-    {
-        this.ad = Ad;
-        this.soyad = Soyad;
-    }
-    public Kisiler()
-    {
-
     }
 
 }
