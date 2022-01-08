@@ -1,17 +1,17 @@
 [
 	{
-		"Ad": "Mustafa Kemal",
-		"Soyad": "Atatürk",
+		"Ad": "Mustafa Kemal Atatürk",
 		"DogumTarihi": "1881",
 		"Fotograf": "MustafaKemalAtaturk.png",
-		"Aciklama": "lorem ipsum dolar"
+		"Ozet": "lorem ipsum dolar"
+		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar"
 	},
 	
 	{
-		"Ad": "Mustafa Kemal son",
-		"Soyad": "Atatürk",
-		"DogumTarihi": "1881",
+		"Ad": "Mustafa Kemal Atatürk2",
+		"DogumTarihi": "1882",
 		"Fotograf": "MustafaKemalAtaturk.png",
-		"Aciklama": "lorem ipsum dolar"
+		"Ozet": "lorem ipsum dolar"
+		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar"
 	}
 ]
