@@ -4,25 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.database.Cursor;
+
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.example.hr200036_yusuf_emre_sener_final.R;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import Model.Constants;
-import Model.CustomItemClickListener;
 import Model.DataAdapter;
 import Model.Kisiler;
 import io.reactivex.Observer;
@@ -31,35 +21,34 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import network.Service;
-import network.ServiceApi;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity {
-    private List<Kisiler> list;
-    ImageView image_view;
+public class MainActivity extends AppCompatActivity
+{
     private RecyclerView recyclerView;
-    private DataAdapter dataAdapter;
-    RecyclerView.Adapter mAdapter;
-
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         init();
+        HeaderAl();
 
     }
-private void init()
-{
-    recyclerView = findViewById(R.id.rcvKisilers);
-    IstekleriAl();
-}
-    private void IstekleriAl() {
-        try {
+    private void HeaderAl()
+    {
+        ImageView imageView = (ImageView) findViewById(R.id.arkaplan);
+        String arkaplan = "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/ArkaPlan.jpg";
+        Picasso.with(this).load(arkaplan).into(imageView);
+    }
+    private void init()
+    {
+        recyclerView = findViewById(R.id.rcvKisilers);
+        IstekleriAl();
+    }
+    private void IstekleriAl()
+    {
             new Service().getServiceApi().getkisiler().
                     subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
@@ -91,12 +80,6 @@ private void init()
                         }
                     });
             }
-        catch (Exception e)
-        {
-            Log.d("Hata", "Hataaa");
-        }
-
-    }
 
     private void initRecycleView(List<Kisiler> kisileriAl)
     {

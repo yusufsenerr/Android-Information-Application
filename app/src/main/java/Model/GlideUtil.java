@@ -6,10 +6,10 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 
 public class GlideUtil {
-    public  static  void resmiIndiripGoster(Context context, String resimUrl, ImageView imageView)
+    public  static  void resmiIndiripGoster(Context context, String Fotograf, ImageView imageView)
     {
         Glide.with(context)
-                .load(resimUrl)
+                .load(Fotograf)
                 .centerCrop()
                 .into(imageView);
     }

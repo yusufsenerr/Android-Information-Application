@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ColorSplash">#FFFFFFFF</color>
     <color name="SaydamArkaPlan">#7F000000</color>
+    <color name="GriArkaPlan">#d1ccc0</color>
 </resources>

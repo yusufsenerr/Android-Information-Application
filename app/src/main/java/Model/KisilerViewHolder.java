@@ -13,7 +13,7 @@ public class KisilerViewHolder  extends RecyclerView.ViewHolder {
     TextView txtAd;
     TextView txtDogumTarihi;
     TextView txtOzet;
-    ImageView imgFoto;
+    ImageView ImgKisi;
 
     public KisilerViewHolder(@NonNull View itemview)
     {
@@ -21,7 +21,7 @@ public class KisilerViewHolder  extends RecyclerView.ViewHolder {
         txtAd = itemview.findViewById(R.id.txtAd);
         txtDogumTarihi = itemview.findViewById(R.id.txtDogumTarihi);
         txtOzet = itemview.findViewById(R.id.txtOzet);
-        imgFoto = itemview.findViewById(R.id.ImgKisi);
+        ImgKisi = itemview.findViewById(R.id.ImgKisi);
 
     }
 }

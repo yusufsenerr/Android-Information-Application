@@ -8,8 +8,9 @@ import Model.Kisiler;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public interface ServiceApi     {
+public interface ServiceApi{
 
     @GET("kisiler.json")
     Observable<List<Kisiler>> getkisiler();
+
 }

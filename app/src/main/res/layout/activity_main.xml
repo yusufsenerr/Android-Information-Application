@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/RcvKisiler"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="activity.MainActivity">
+    android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvKisilers"
+    <LinearLayout
+        android:id="@+id/RcvKisiler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/list_item_layout" />
-</FrameLayout>
+        android:background="@color/GriArkaPlan"
+        android:orientation="vertical"
+        tools:context="activity.MainActivity">
+
+        <ImageView
+            android:id="@+id/arkaplan"
+            android:layout_width="match_parent"
+            android:adjustViewBounds="true"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvKisilers"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:background="@color/GriArkaPlan"
+            tools:listitem="@layout/list_item_layout">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
 
 
