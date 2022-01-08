@@ -12,6 +12,46 @@
 		"DogumTarihi": "11 Şubat 1847",
 		"Fotograf": "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/edison.jpg",
 		"Ozet": "Thomas Alva Edison, 20. yüzyıl yaşamını icatlarıyla büyük bir şekilde etkileyen Amerikalı mucit ve iş adamıdır. Elektrik enerjisi üretimi, kitle iletişimi, ses kaydı, filmcilik gibi birçok alanda cihazlar geliştirdi.",
-		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar"
-	}
+		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar2"
+	},
+	
+	{
+		"Ad": "Nikola Tesla",
+		"DogumTarihi": "10 Temmuz 1856",
+		"Fotograf": "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/tesla.jpeg",
+		"Ozet": "Nikola Tesla, Sırp–Amerikalı mucit, elektrik mühendisi, makine mühendisi ve fütüristti. Günümüzde en çok alternatif akım elektrik kaynağı sistemine verdiği katkılarla tanınmaktadır.",
+		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar3"
+	},
+	
+	{
+		"Ad": "Albert Einstein",
+		"DogumTarihi": "14 Mart 1879",
+		"Fotograf": "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/Einstein.jpg",
+		"Ozet": "Albert Einstein, Almanya doğumlu Yahudi teorik fizikçidir. Fizik ve matematik alanında yaptığı çalışmalar sayesinde 1921 yılında Nobel Fizik Ödülü'nü kazandı.",
+		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar4"
+	},
+	
+	{
+		"Ad": "Isaac Newton",
+		"DogumTarihi": "4 Ocak 1643",
+		"Fotograf": "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/newton.jpg",
+		"Ozet": "Sir Isaac Newton, İngiliz fizikçi, matematikçi, astronom, mucit, filozof ve teolog. 1687’de yayımlanan kitabı Philosophiæ Naturalis Principia Mathematica, klasik mekaniğin temelini atmıştır ve tarihin en önemli bilimsel kitaplarından biri olmuştur.",
+		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar5"
+	},
+	
+		{
+		"Ad": "Galileo Galilei",
+		"DogumTarihi": "15 Şubat 1564",
+		"Fotograf": "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/galileo.jpg",
+		"Ozet": "Galileo Galilei, İtalyan astronom, fizikçi, mühendis, filozof ve matematikçiydi. Rönesans'ın bilimsel devrimine büyük katkıda bulunan bilim insanına “gözlemsel astronominin babası”, “modern fiziğin babası” ve “bilimin babası” gibi isimler takılmıştır.",
+		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar6"
+	},
+	
+		{
+		"Ad": "Pisagor",
+		"DogumTarihi": "M.Ö. 570",
+		"Fotograf": "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/Einstein.jpg",
+		"Ozet": "Sisamlı Pisagor, antik İyonya'nın en ünlü düşünürlerinden biri olmuş Yunan filozof ve Pisagorculuğun kurucusuydu. Politik ve dinî öğretilerini daha çok Magna Graecia'da yayan Pisagor, önce Platon ve Aristo'nun felsefelerini sonra ise tüm Batı felsefesini etkiledi.",
+		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar7"
+	},
 ]
