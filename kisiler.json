@@ -8,10 +8,10 @@
 	},
 	
 	{
-		"Ad": "Mustafa Kemal Atatürk2",
-		"DogumTarihi": "1882",
-		"Fotograf": "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/MustafaKemalAtaturk.png",
-		"Ozet": "lorem ipsum dola22r",
+		"Ad": "Thomas Edison",
+		"DogumTarihi": "11 Şubat 1847",
+		"Fotograf": "https://raw.githubusercontent.com/yusufsenerr/hr200036yusufemresener/main/edison.jpg",
+		"Ozet": "Thomas Alva Edison, 20. yüzyıl yaşamını icatlarıyla büyük bir şekilde etkileyen Amerikalı mucit ve iş adamıdır. Elektrik enerjisi üretimi, kitle iletişimi, ses kaydı, filmcilik gibi birçok alanda cihazlar geliştirdi.",
 		"GenelBilgi":"lorem ipsum dolar lorem ipsun dolar"
 	}
 ]
