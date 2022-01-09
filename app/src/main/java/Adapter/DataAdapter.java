@@ -1,4 +1,4 @@
-package Model;
+package Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,19 +10,35 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.hr200036_yusuf_emre_sener_final.R;
 import java.util.List;
 
+import Model.Kisiler;
+import Util.GlideUtil;
+
 public class DataAdapter extends RecyclerView.Adapter<KisilerViewHolder> {
 
      List<Kisiler> kisilers;
      Context context;
-    public DataAdapter(List<Kisiler> kisilers,Context context) {
+    OnItemClickListener onItemClickListener;
+    public DataAdapter(List<Kisiler> kisilers,Context context,OnItemClickListener onItemClickListener) {
         this.kisilers = kisilers;
         this.context = context;
+        this.onItemClickListener = onItemClickListener;
     }
     @NonNull
     @Override
     public KisilerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_layout, parent,false);
-        return new KisilerViewHolder(view);
+
+        KisilerViewHolder kisilerViewHolder = new KisilerViewHolder(view);
+        view.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                onItemClickListener.onItemClick(kisilers.get(kisilerViewHolder.getAdapterPosition()));
+            }
+        });
+
+        return  kisilerViewHolder;
     }
 
     @Override
@@ -40,5 +56,9 @@ public class DataAdapter extends RecyclerView.Adapter<KisilerViewHolder> {
     }
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
+    }
+    public interface OnItemClickListener
+    {
+        void onItemClick(Kisiler TiklananKisi);
     }
 }

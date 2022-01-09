@@ -1,6 +1,6 @@
 package network;
 
-import Model.Constants;
+import Util.Constants;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;

@@ -10,4 +10,5 @@
     <color name="ColorSplash">#FFFFFFFF</color>
     <color name="SaydamArkaPlan">#7F000000</color>
     <color name="GriArkaPlan">#d1ccc0</color>
+    <color name="DetailArkaPlan">#bdc3c7</color>
 </resources>

@@ -1,4 +1,4 @@
-package Model;
+package Adapter;
 
 import android.view.View;
 import android.widget.ImageView;

@@ -1,4 +1,4 @@
-package Model;
+package Util;
 
 import android.content.Context;
 import android.widget.ImageView;
