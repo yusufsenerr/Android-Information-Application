@@ -64,12 +64,5 @@ public class Kisiler {
         this.genelBilgi = genelBilgi;
     }
 
-    public String getGenelBilgi2() {
-        return genelBilgi2;
-    }
-
-    public void setGenelBilgi2(String genelBilgi2) {
-        this.genelBilgi2 = genelBilgi2;
-    }
 
 }

@@ -114,8 +114,6 @@ public class MainActivity extends AppCompatActivity
                 kisi.putExtra("Ad",TiklananKisi.getAd());
                 kisi.putExtra("Fotograf",TiklananKisi.getFotograf());
                 kisi.putExtra("GenelBilgi",TiklananKisi.getGenelBilgi());
-                kisi.putExtra("GenelBilgi2",TiklananKisi.getGenelBilgi2());
-
                 startActivity(kisi);
             }
         });
